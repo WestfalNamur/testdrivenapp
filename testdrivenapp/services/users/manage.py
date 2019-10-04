@@ -12,7 +12,8 @@ from project.api.models import User
 
 
 COV = coverage.coverage(
-    branch=True, include="project/*", omit=["project/tests/*", "project/config.py"]
+    branch=True, include="project/*",
+    omit=["project/tests/*", "project/config.py"]
 )
 COV.start()
 
