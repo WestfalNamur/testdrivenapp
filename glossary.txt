@@ -1,0 +1,94 @@
+AWS
+
+	AWS Security Group
+		Virtual firewall to control traffic to and from instance;
+	
+	IAM user
+		 Identity and Access Management;
+		 Part of a group with defined permissions;
+		 Has access-key and secret-key 
+		 via terminal or (~/.aws/credentials/credentials.csv)
+
+Bash
+	
+	eval [arg ...]
+    The  args  are read and concatenated together into a single command. This
+    command is then read and executed by the shell, and its  exit status is
+    returned as the value of eval.  If there are no args, or only null
+    arguments, eval returns 0;
+	i.e. eval $(docker-machine env testdriven-prod);
+
+Docker
+
+	Docker
+		Docker Engine (Client-server application made up of the Docker daemon)
+		+ REST API that specifies interfaces for interacting with the daemon;
+
+	Docker Engine
+		Usually referred to as "Docker";
+		Client-server application made up of the Docker daemon;
+
+	Docker Compose
+		Tool for defining and running multi-container Docker applications;
+		Use a YAML file to configure your application’s services;
+		1. Define app-env with a Dockerfile;
+		2. Define services with docker-compose.yml so they can be run together in
+		   an isolated environment;
+		3. "docker-compose up" to run app
+		"docker-compose build" build image from Dockerfile;
+		"docker-compose up -d --build" fires up container;
+		"docker-compose logs";
+		"docker-compose exec users python manage.py test" executes commands
+		 	defined in manage.py;
+	 
+	Docker Machine
+		Tool that lets you install Docker Engine on virtual hosts;
+		"docker-machine env <HOSTNAME>" to point at host <HOSTNAME>
+		example create:
+			docker-machine create \
+			--amazonec2-access-key AKIXXXXXXX \
+			--amazonec2-secret-key XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
+			--driver amazonec2 --amazonec2-region eu-central-1 \
+			--amazonec2-instance-type "t2.micro" \
+			docker-egine-name
+		point to engine:
+			"docker-machine env docker-egine-name" set active host
+			"eval $(docker-machine env testdriven-prod)"
+			Selection indicated by *
+		"docker-machine ls --timeout "120"" # timeout extended in case of slow
+			connection.
+
+	Docker Image
+		Created by sequence of commands written in a file called as Dockerfile;
+		An image is a compressed, self-contained piece of software which has to be
+	unwrapped in order to use the functionality;
+
+Flask
+	
+	Blueprint
+		A blueprint defines a collection of views, templates, static files and
+		other elements that can be applied to an application;
+
+	request
+		Data from client gets sent to server as global request object;
+		flask.request lets you process this pbject;
+
+	render_template
+		Flask functionality to render a template;
+
+Gunicorn
+	Python WSGI HTTP Server for UNIX; Interacts with nginx and actual python
+	web-app code to serve dynamical content;
+	Pre-fork worker model:
+		Master creates forks which handle each request; A fork is a completely
+		separate *nix process; "pre-fork" means that these processes are forked
+		before a request comes in;
+	Gevent:
+		workers-threads are asynchronous;
+
+Nginx
+	Web-server,reverse proxy, HTTP cache, and load balancer; 
+	# for serving static content;
+	Low memory; High concurrency; Asynchronous event-driven; Requests are
+	handled in a single thread; Master porcess controls multiple worker
+	processes; 
