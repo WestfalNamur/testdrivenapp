@@ -64,11 +64,12 @@ Docker
 			Selection indicated by *
 		"docker-machine ls --timeout "120"" # timeout extended in case of slow
 			connection.
+		docker-machine --debug regenerate-certs -f default;
 
 	Docker Image
 		Created by sequence of commands written in a file called as Dockerfile;
 		An image is a compressed, self-contained piece of software which has to be
-	unwrapped in order to use the functionality;
+		unwrapped in order to use the functionality;
 
 Flask
 	
