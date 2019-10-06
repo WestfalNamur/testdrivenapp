@@ -1,4 +1,5 @@
 AJAX
+
 	Asynchronous JavaScript + XML; JSON is primarily used for requests;
 	HTML + CSS + JS + DOM + XML and XMLHttpRequest-object;
 	Combination of theses tools allows quick and incremental updates to an app
@@ -83,6 +84,7 @@ Flask
 		Flask functionality to render a template;
 
 Gunicorn
+
 	Python WSGI HTTP Server for UNIX; Interacts with nginx and actual python
 	web-app code to serve dynamical content;
 	Pre-fork worker model:
@@ -93,6 +95,7 @@ Gunicorn
 		workers-threads are asynchronous;
 
 Nginx
+
 	Web-server,reverse proxy, HTTP cache, and load balancer; 
 	# for serving static content;
 	Low memory; High concurrency; Asynchronous event-driven; Requests are
@@ -105,3 +108,13 @@ Race Condition
 
 React
 	Component Lifecycle Methodes
+	Testing:
+		Jest
+			JavaScript Testing Framework;
+			Snapshot Testing tests UI component against an older snapshot of it
+			that is stored alongside the test;
+		Enzyme
+			Component testing library; Tests component output;
+			shallow(<Component />) allows isolated testing of components;
+			mount(<Component />) testing within whole lifecycle. For components
+			that may interact with the DOM api. Full DOM renderig;
