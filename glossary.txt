@@ -1,3 +1,10 @@
+AJAX
+
+	Asynchronous JavaScript + XML; JSON is primarily used for requests;
+	HTML + CSS + JS + DOM + XML and XMLHttpRequest-object;
+	Combination of theses tools allows quick and incremental updates to an app
+	without reloading the entire browser page; "Asynchronous XMLHttpRequest";
+
 AWS
 
 	AWS Security Group
@@ -57,11 +64,12 @@ Docker
 			Selection indicated by *
 		"docker-machine ls --timeout "120"" # timeout extended in case of slow
 			connection.
+		docker-machine --debug regenerate-certs -f default;
 
 	Docker Image
 		Created by sequence of commands written in a file called as Dockerfile;
 		An image is a compressed, self-contained piece of software which has to be
-	unwrapped in order to use the functionality;
+		unwrapped in order to use the functionality;
 
 Flask
 	
@@ -77,6 +85,7 @@ Flask
 		Flask functionality to render a template;
 
 Gunicorn
+
 	Python WSGI HTTP Server for UNIX; Interacts with nginx and actual python
 	web-app code to serve dynamical content;
 	Pre-fork worker model:
@@ -87,8 +96,26 @@ Gunicorn
 		workers-threads are asynchronous;
 
 Nginx
+
 	Web-server,reverse proxy, HTTP cache, and load balancer; 
 	# for serving static content;
 	Low memory; High concurrency; Asynchronous event-driven; Requests are
 	handled in a single thread; Master porcess controls multiple worker
 	processes; 
+
+Race Condition
+	Behavior of a system is dependent on the sequence or timing of other
+	uncontrollable events; React solves this via Lifecycle Methodes;
+
+React
+	Component Lifecycle Methodes
+	Testing:
+		Jest
+			JavaScript Testing Framework;
+			Snapshot Testing tests UI component against an older snapshot of it
+			that is stored alongside the test;
+		Enzyme
+			Component testing library; Tests component output;
+			shallow(<Component />) allows isolated testing of components;
+			mount(<Component />) testing within whole lifecycle. For components
+			that may interact with the DOM api. Full DOM renderig;
