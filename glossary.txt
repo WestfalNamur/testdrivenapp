@@ -77,6 +77,10 @@ Flask
 		A blueprint defines a collection of views, templates, static files and
 		other elements that can be applied to an application;
 
+	Migrate
+		"...handles SQLAlchemy database migrations for Flask applications using
+		Alembic." 
+
 	request
 		Data from client gets sent to server as global request object;
 		flask.request lets you process this pbject;
