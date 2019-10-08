@@ -1,7 +1,7 @@
 # services/users/project/api/users.py
 
 
-from flask import Blueprint, request, render_template
+from flask import Blueprint, request, render_template, jsonify
 from flask_restful import Resource, Api
 from sqlalchemy import exc
 
@@ -46,6 +46,14 @@ class UsersList(Resource):
         except exc.IntegrityError:
             db.session.rollback()
             return response_object, 400
+        except (exc.IntegrityError, ValueError):
+            """ return jsonify(response_object), 400 raises err.:
+            Object of type TestResponse is not JSON serializable
+            """
+            db.session.rollback()
+            response = jsonify(response_object)
+            response.status_code = 400
+            return response
 
     def get(self):
         """Get all users"""
