@@ -123,3 +123,8 @@ React
 			shallow(<Component />) allows isolated testing of components;
 			mount(<Component />) testing within whole lifecycle. For components
 			that may interact with the DOM api. Full DOM renderig;
+
+Token-based-Authentification
+	
+	Credentials to servers; Server returns token; Every server-call includes the token;
+	Pro. Stateless and Single Sign On; Cons: Cross-site Scripting if not stored as Cooky;
