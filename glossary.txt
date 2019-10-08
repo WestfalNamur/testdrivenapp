@@ -99,6 +99,11 @@ Gunicorn
 	Gevent:
 		workers-threads are asynchronous;
 
+Hash-based routing
+
+	...changes in the hash don’t trigger page reload;
+	.com/#/something/list => #/something/list does not get sent to the server;
+
 JWT
 
 	JSON Web Tokens 
