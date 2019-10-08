@@ -99,6 +99,10 @@ Gunicorn
 	Gevent:
 		workers-threads are asynchronous;
 
+JWT
+
+	JSON Web Tokens 
+
 Nginx
 
 	Web-server,reverse proxy, HTTP cache, and load balancer; 
