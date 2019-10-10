@@ -1,6 +1,10 @@
 import React from "react";
+import { Redirect } from 'react-router-dom';
 
 const Form = props => {
+  if (props.isAuthenticated) {
+    return <Redirect to="/" />;
+  }
   return (
     <div>
       {props.formType === "Login" && <h1 className="title is-1">Log In</h1>}
