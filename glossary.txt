@@ -4,6 +4,7 @@ AJAX
 	HTML + CSS + JS + DOM + XML and XMLHttpRequest-object;
 	Combination of theses tools allows quick and incremental updates to an app
 	without reloading the entire browser page; "Asynchronous XMLHttpRequest";
+	
 
 AWS
 
