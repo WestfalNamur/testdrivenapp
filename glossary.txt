@@ -72,6 +72,10 @@ Docker
 		An image is a compressed, self-contained piece of software which has to be
 		unwrapped in order to use the functionality;
 
+Enviroment
+
+	export export REACT_APP_USERS_SERVICE_URL=http://localhost
+
 Flask
 	
 	Blueprint

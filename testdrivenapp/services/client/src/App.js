@@ -115,17 +115,6 @@ class App extends Component {
                     path="/"
                     render={() => (
                       <div>
-                        <h1 className="title is-1">All Users</h1>
-                        <hr />
-                        <br />
-                        <AddUser
-                          username={this.state.username}
-                          email={this.state.email}
-                          addUser={this.addUser}
-                          handleChange={this.handleChange}
-                        />
-                        <br />
-                        <br />
                         <UsersList users={this.state.users} />
                       </div>
                     )}
