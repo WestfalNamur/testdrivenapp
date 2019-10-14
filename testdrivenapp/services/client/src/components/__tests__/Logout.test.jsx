@@ -5,7 +5,6 @@ import { MemoryRouter as Router } from 'react-router-dom';
 
 import Logout from '../Logout';
 
-// user of jset.fn() to mock logoutUser
 const logoutUser = jest.fn();
 
 test('Logout renders properly', () => {

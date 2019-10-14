@@ -3,6 +3,8 @@ version: '3.7'
 services:
 
   users:
+    env_file: 
+      - ../../environments/shell/testdriven.env
     build:
       context: ./services/users
       dockerfile: Dockerfile-prod
@@ -13,7 +15,7 @@ services:
       - APP_SETTINGS=project.config.ProductionConfig
       - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_dev
       - DATABASE_TEST_URL=postgres://postgres:postgres@users-db:5432/users_test
-      - SECRET_KEY=${SECRET_KEY}
+      - SECRET_KEY=${SECRET_KEY_PROD}
     depends_on:
       - users-db
 
@@ -45,7 +47,7 @@ services:
       dockerfile: Dockerfile-prod
       args:
         - NODE_ENV=production
-        - REACT_APP_USERS_SERVICE_URL=${REACT_APP_USERS_SERVICE_URL}
+        - REACT_APP_USERS_SERVICE_URL=${REACT_APP_USERS_SERVICE_URL_PROD}
     ports:
       - '3007:80'
     depends_on:

@@ -3,8 +3,6 @@ version: '3.7'
 services:
 
   users:
-    env_file: 
-      - ../../environments/shell/testdriven.env
     build:
       context: ./services/users
       dockerfile: Dockerfile
@@ -17,7 +15,7 @@ services:
       - APP_SETTINGS=project.config.DevelopmentConfig
       - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_dev
       - DATABASE_TEST_URL=postgres://postgres:postgres@users-db:5432/users_test
-      - SECRET_KEY={SECRET_KEY_DEV}
+      - SECRET_KEY=my_precious
     depends_on:
       - users-db
 
@@ -43,8 +41,6 @@ services:
       - client
 
   client:
-    env_file: 
-      - ../../environments/shell/testdriven.env
     build:
       context: ./services/client
       dockerfile: Dockerfile
@@ -55,6 +51,6 @@ services:
       - 3007:3000
     environment:
       - NODE_ENV=development
-      - REACT_APP_USERS_SERVICE_URL={REACT_APP_USERS_SERVICE_URL_DEV}
+      - REACT_APP_USERS_SERVICE_URL=http://localhost
     depends_on:
       - users
