@@ -4,6 +4,7 @@ AJAX
 	HTML + CSS + JS + DOM + XML and XMLHttpRequest-object;
 	Combination of theses tools allows quick and incremental updates to an app
 	without reloading the entire browser page; "Asynchronous XMLHttpRequest";
+	
 
 AWS
 
@@ -71,11 +72,19 @@ Docker
 		An image is a compressed, self-contained piece of software which has to be
 		unwrapped in order to use the functionality;
 
+Enviroment
+
+	export export REACT_APP_USERS_SERVICE_URL=http://localhost
+
 Flask
 	
 	Blueprint
 		A blueprint defines a collection of views, templates, static files and
 		other elements that can be applied to an application;
+
+	Migrate
+		"...handles SQLAlchemy database migrations for Flask applications using
+		Alembic." 
 
 	request
 		Data from client gets sent to server as global request object;
@@ -94,6 +103,15 @@ Gunicorn
 		before a request comes in;
 	Gevent:
 		workers-threads are asynchronous;
+
+Hash-based routing
+
+	...changes in the hash don’t trigger page reload;
+	.com/#/something/list => #/something/list does not get sent to the server;
+
+JWT
+
+	JSON Web Tokens 
 
 Nginx
 
@@ -119,3 +137,8 @@ React
 			shallow(<Component />) allows isolated testing of components;
 			mount(<Component />) testing within whole lifecycle. For components
 			that may interact with the DOM api. Full DOM renderig;
+
+Token-based-Authentification
+	
+	Credentials to servers; Server returns token; Every server-call includes the token;
+	Pro. Stateless and Single Sign On; Cons: Cross-site Scripting if not stored as Cooky;
