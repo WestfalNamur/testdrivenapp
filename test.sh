@@ -21,11 +21,11 @@ docker-compose -f testdrivenapp/docker-compose.yml down
 
 # new
 # run e2e tests
-docker-compose -f testdrivenapp/docker-compose-prod.yml up -d --build
-docker-compose -f testdrivenapp/docker-compose-prod.yml exec users python manage.py recreate_db
+docker-compose -f testdrivenapp/docker-compose.yml up -d --build
+docker-compose -f testdrivenapp/docker-compose.yml exec users python manage.py recreate_db
 ./node_modules/.bin/cypress run --config baseUrl=http://localhost
 inspect $? e2e
-docker-compose -f testdrivenapp/docker-compose-prod.yml down
+docker-compose -f testdrivenapp/docker-compose.yml down
 
 # return proper code
 if [ -n "${fails}" ]; then
