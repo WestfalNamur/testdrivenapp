@@ -2,6 +2,7 @@ const randomstring = require("randomstring");
 
 const username = randomstring.generate();
 const email = `${username}@test.com`;
+const password = "greaterthanten";
 
 describe("Status", () => {
   it("should not display user info if a user is not logged in", () => {
@@ -19,6 +20,7 @@ describe("Status", () => {
       .get("a")
       .contains("Log In");
   });
+
   it("should display user info if a user is logged in", () => {
     // register user
     cy.visit("/register")
@@ -27,7 +29,7 @@ describe("Status", () => {
       .get('input[name="email"]')
       .type(email)
       .get('input[name="password"]')
-      .type("test")
+      .type(password)
       .get('input[type="submit"]')
       .click()
       .get(".navbar-burger")
