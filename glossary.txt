@@ -127,6 +127,12 @@ Nginx
 	handled in a single thread; Master porcess controls multiple worker
 	processes; 
 
+OpenAPI Specification (formerly Swagger)
+
+	API description format; describes available endpoints and respective
+	operations, operation parameter and input, authentification methodes, 
+	contact, license and other infos; YAML or JSON;  	
+
 Race Condition
 	Behavior of a system is dependent on the sequence or timing of other
 	uncontrollable events; React solves this via Lifecycle Methodes;
