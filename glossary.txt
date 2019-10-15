@@ -26,6 +26,12 @@ Bash
     arguments, eval returns 0;
 	i.e. eval $(docker-machine env testdriven-prod);
 
+Cypress
+	
+	./node_modules/.bin/cypress open --config baseUrl=http://localhost
+	leverages jQuery’s selector engine; asynchronous; commands return promises;
+	DOM elements wraped in retry-and-timeout logig; "queue of commands";  
+
 Docker
 
 	Docker

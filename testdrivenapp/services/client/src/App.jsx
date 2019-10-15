@@ -22,7 +22,7 @@ class App extends Component {
         email: "",
         password: ""
       },
-      isAuthenticated: false
+      isAuthenticated: window.localStorage.getItem("authToken") ? true : false
     };
     this.addUser = this.addUser.bind(this);
     this.handleChange = this.handleChange.bind(this);
