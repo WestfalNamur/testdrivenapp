@@ -8,7 +8,8 @@ describe("Login", () => {
     cy.visit("/login")
       .get("h1")
       .contains("Log In")
-      .get("form");
+      .get("form")
+      .get('input[disabled]');
   });
   it("should allow a user to sign in", () => {
     // register user

@@ -8,7 +8,8 @@ describe("Register", () => {
     cy.visit("/register")
       .get("h1")
       .contains("Register")
-      .get("form");
+      .get("form")
+      .get('input[disabled]');
   });
   it("should allow a user to register", () => {
     // register user
