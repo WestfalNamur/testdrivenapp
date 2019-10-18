@@ -9,6 +9,8 @@ inspect() {
   fi
 }
 
+export REACT_APP_USERS_SERVICE_URL_PROD=http://127.0.0.1
+
 # run server-side tests
 server() {
   docker-compose -f testdrivenapp/docker-compose.yml up -d --build
