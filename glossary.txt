@@ -17,6 +17,18 @@ AWS
 		 Has access-key and secret-key 
 		 via terminal or (~/.aws/credentials/credentials.csv)
 
+	VPC (Virtual Private Cloud) and Subnets
+		- CIDR: Classless Inter-Domain Routing block; primary IPv4 adresses 
+		for your VPN; Must be specified when creating a subnet or a VPC;
+		- VPC: virtual private cloud; logically isolated from other virtual
+		networks in the AWS Cloud; lunch aws EC2 instances into your VCP;
+		You can define IP adress range for your VPC, add subnets and associate
+		security groups; can span different zones;
+		- subnet: range of IP addresses in your VPC; You can launch AWS
+		resources into a specified subnet; public subnet for ressources that
+		need access to the internet and privat subnet for ressources that wont
+		be connected to the internet (via IPv4); can not span different zones; 
+
 Bash
 	
 	eval [arg ...]
@@ -58,13 +70,6 @@ Docker
 	Docker Machine
 		Tool that lets you install Docker Engine on virtual hosts;
 		"docker-machine env <HOSTNAME>" to point at host <HOSTNAME>
-		example create:
-			docker-machine create \
-			--amazonec2-access-key AKIXXXXXXX \
-			--amazonec2-secret-key XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
-			--driver amazonec2 --amazonec2-region eu-central-1 \
-			--amazonec2-instance-type "t2.micro" \
-			docker-egine-name
 		point to engine:
 			"docker-machine env docker-egine-name" set active host
 			"eval $(docker-machine env testdriven-prod)"
