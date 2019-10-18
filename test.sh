@@ -9,8 +9,6 @@ inspect() {
   fi
 }
 
-export REACT_APP_USERS_SERVICE_URL_PROD=http://127.0.0.1
-
 # run server-side tests
 server() {
   docker-compose -f testdrivenapp/docker-compose.yml up -d --build
@@ -33,7 +31,7 @@ client() {
 e2e() {
   docker-compose -f testdrivenapp/docker-compose-prod.yml up -d --build
   docker-compose -f testdrivenapp/docker-compose-prod.yml exec users python manage.py recreate_db
-  ./node_modules/.bin/cypress run --config baseUrl=http://localhost
+  ./node_modules/.bin/cypress run --config baseUrl=http://127.0.0.1
   inspect $? e2e
   docker-compose -f testdrivenapp/docker-compose-prod.yml down
 }
