@@ -1,3 +1,9 @@
+# Testdrivenapp
+	Coding along the course "microservices-with-docker-flask-and-react" on
+	testdriven.io. The code is therfore based on the corresponding examples
+	guidelines and assignements. 
+
+
 # Copyright
 	Copyright 2017 - 2019 TestDriven Labs. Developed by Michael Herman.
 
@@ -23,7 +29,7 @@
 		- Swagger
 		- Amazon Web Services (AWS)
 
-	- Concelpts
+	- Concepts
 		- Microservice Architecture
 		- Test-Driven-Developement (TDD)
 		- Continuous Integration (CI)
