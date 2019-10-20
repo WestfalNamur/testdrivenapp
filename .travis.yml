@@ -18,7 +18,7 @@ before_script:
   - npm install
 
 script:
-  - bash test.sh e2e
+  - bash test.sh stage
 
 after_script:
   - docker-compose down
