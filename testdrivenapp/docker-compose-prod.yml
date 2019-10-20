@@ -3,8 +3,6 @@ version: '3.7'
 services:
 
   users:
-    env_file: 
-      - ../../environments/shell/testdriven.env
     build:
       context: ./services/users
       dockerfile: Dockerfile-prod
