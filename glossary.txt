@@ -13,6 +13,12 @@ AWS
 
 	ECR
 		Elastic Container Registry; privat image registry on AWS;
+
+	ELB
+		Elastic Load Balancer; distributes incoming application traffic across
+		multiple targets;
+			Application Load Balancer: provides support for path-based routing
+			and dynamic port-mapping;
 	
 	IAM user
 		 Identity and Access Management;
@@ -166,5 +172,13 @@ Token-based-Authentification
 Travis
 	
 	Enviroment Variables
+
+Web
+	
+	path-based routing: forward requests based on the URL path;
+
+	dynamic port mapping: redirects a communication request from one address and port
+	number combination to another while the packets are traversing a network gateway;
+	maps requests to ports of containers;
 
 		
