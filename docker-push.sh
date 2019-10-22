@@ -10,6 +10,7 @@ then
     unzip awscli-bundle.zip
     ./awscli-bundle/install -b ~/bin/aws
     export PATH=~/bin:$PATH
+    # add AWS_ACCOUNT_ID, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY env vars
     eval $(aws ecr get-login --region eu-central-1 --no-include-email)
     export TAG=$TRAVIS_BRANCH
     export REPO=$AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com
@@ -18,7 +19,6 @@ then
   if [ "$TRAVIS_BRANCH" == "staging" ] || \
      [ "$TRAVIS_BRANCH" == "production" ]
   then
-    export environment=LANG="es_ES.utf8"
     # users
     docker build $USERS_REPO -t $USERS:$COMMIT -f Dockerfile-prod
     docker tag $USERS:$COMMIT $REPO/$USERS:$TAG
