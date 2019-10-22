@@ -10,6 +10,9 @@ AWS
 
 	AWS Security Group
 		Virtual firewall to control traffic to and from instance;
+
+	ECR
+		Elastic Container Registry; privat image registry on AWS;
 	
 	IAM user
 		 Identity and Access Management;
@@ -159,3 +162,9 @@ Token-based-Authentification
 	
 	Credentials to servers; Server returns token; Every server-call includes the token;
 	Pro. Stateless and Single Sign On; Cons: Cross-site Scripting if not stored as Cooky;
+
+Travis
+	
+	Enviroment Variables
+
+		
