@@ -18,6 +18,7 @@ then
   if [ "$TRAVIS_BRANCH" == "staging" ] || \
      [ "$TRAVIS_BRANCH" == "production" ]
   then
+    export environment=LANG="es_ES.utf8"
     # users
     docker build $USERS_REPO -t $USERS:$COMMIT -f Dockerfile-prod
     docker tag $USERS:$COMMIT $REPO/$USERS:$TAG
