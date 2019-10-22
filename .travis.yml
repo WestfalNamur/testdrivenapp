@@ -7,7 +7,7 @@ env:
   DOCKER_COMPOSE_VERSION: 1.23.2
   COMMIT: ${TRAVIS_COMMIT::8}
   MAIN_REPO: https://github.com/WestfalNamur/testdrivenapp.git
-  USERS: test-driven-user
+  USERS: test-driven-users
   USERS_REPO: ${MAIN_REPO}#${TRAVIS_BRANCH}:testdrivenapp/services/users
   USERS_DB: test-driven-users_db
   USERS_DB_REPO: ${MAIN_REPO}#${TRAVIS_BRANCH}:testdrivenapp/services/users/project/db
