@@ -1,6 +1,5 @@
 # Archived
-	Tutorial not available anymore
-	https://testdriven.io/courses/microservices-with-docker-flask-and-react/
+	Haulted due to focus on other projects including master thesis.
 
 # Testdrivenapp
 	Coding along the course "microservices-with-docker-flask-and-react" on
